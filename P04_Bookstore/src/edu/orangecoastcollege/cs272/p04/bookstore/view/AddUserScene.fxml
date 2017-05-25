@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="960.0" minHeight="700.0" minWidth="960.0" prefHeight="700.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.p04.bookstore.view.AddUserScene">
+   <top>
+      <VBox prefHeight="10.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label onMouseClicked="#returnHome" text="Home / " />
+                  <Label onMouseClicked="#returnUsers" text="Manage Users / " />
+               </children>
+            </HBox>
+            <Label text="Add User">
+               <font>
+                  <Font size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children></VBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+
+
+         <children>
+            <Label text="Username" />
+            <Label text="Password" GridPane.rowIndex="4" />
+            <Label text="Position" GridPane.rowIndex="6" />
+            <Label text="Access Level" GridPane.rowIndex="8" />
+            <TextField fx:id="usernameTF" GridPane.rowIndex="1" />
+            <TextField fx:id="passwordTF" GridPane.rowIndex="5" />
+            <TextField fx:id="positionTF" GridPane.rowIndex="7" />
+            <ComboBox fx:id="accessLevelCB" prefHeight="27.0" prefWidth="340.0" GridPane.rowIndex="9" />
+            <HBox alignment="TOP_CENTER" prefHeight="15.0" prefWidth="340.0" spacing="100.0" GridPane.rowIndex="11">
+               <children>
+                  <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#save" text="Save" />
+               </children>
+            </HBox>
+            <Label fx:id="errorLabel" text="Failed To Save" textFill="RED" visible="false" GridPane.rowIndex="10" />
+            <Label fx:id="usernameErrorLabel" text="Username Required" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="passwordErrorLabel" text="Password Required" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="positionErrorLabel" text="Position Required" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="accessLvlErrorLabel" text="Access Level Required" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label fx:id="saveErrorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="341.0" text="username is not available" textFill="RED" visible="false" GridPane.rowIndex="12" />
+            <Label fx:id="badSaveErrorLabel" alignment="CENTER" prefHeight="17.0" prefWidth="342.0" text="Saving Error" textFill="RED" visible="false" GridPane.rowIndex="12" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints halignment="LEFT" />
+            <ColumnConstraints halignment="CENTER" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+            <ColumnConstraints maxWidth="95.0" minWidth="10.0" prefWidth="70.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+         </rowConstraints>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+
+      </GridPane>
+   </center>
+   
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</BorderPane>

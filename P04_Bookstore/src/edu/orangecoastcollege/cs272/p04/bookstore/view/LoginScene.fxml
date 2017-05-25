@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="960.0" minHeight="700.0" minWidth="960.0" prefHeight="700.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.p04.bookstore.view.LoginScene">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="44.0" prefWidth="1044.0" text="Antique Bookstore">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="29.0" prefWidth="1058.0" text="Book Inventory and Sales Tracking System">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="155.0" minHeight="10.0" prefHeight="93.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="125.0" minHeight="0.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="156.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="199.0" minHeight="0.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="257.0" minHeight="0.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="311.0" minHeight="0.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="328.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="359.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Username" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="usernameTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="passwordTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" onAction="#logIn" prefHeight="27.0" prefWidth="350.0" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="usernameErrorLabel" text="Username Required" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label fx:id="passwordErrorLabel" text="Password Required" textFill="RED" visible="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label fx:id="loginErrorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="276.0" text="Username or password is incorrect" textFill="RED" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="374.0" text="Made with care by the Bookstore Team" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         
+         
+         </children>
+      </GridPane>
+   </center>
+
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   
+   </BorderPane>

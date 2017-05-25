@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="700.0" maxWidth="960.0" minHeight="700.0" minWidth="960.0" prefHeight="700.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.orangecoastcollege.cs272.p04.bookstore.view.BookInventoryScene">
+   
+      <top>
+      <VBox prefHeight="41.0" prefWidth="580.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label onMouseClicked="#returnHome" text="Home /  " />
+            <Label text="Book Inventory">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane prefHeight="484.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="347.0" minHeight="10.0" prefHeight="335.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="199.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="220.0" minHeight="10.0" prefHeight="96.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="199.0" minHeight="0.0" prefHeight="57.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="250.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TableView fx:id="bookTV" prefHeight="201.0" prefWidth="800.0" GridPane.rowIndex="2">
+              <columns>
+                <TableColumn prefWidth="189.0" text="Title" />
+                <TableColumn prefWidth="113.0" text="Author" />
+                  <TableColumn prefWidth="83.0" text="Published Date" />
+                  <TableColumn prefWidth="90.0" text="Edition" />
+                  <TableColumn prefWidth="96.0" text="Genre" />
+                  <TableColumn prefWidth="103.0" text="Condition" />
+                  <TableColumn prefWidth="91.0" text="Sales $" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="622.0" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="addBookButton" mnemonicParsing="false" onAction="#addBookAction" prefHeight="27.0" prefWidth="133.0" text="Add Book" />
+                  <Button fx:id="manageBookInfoButton" mnemonicParsing="false" onAction="#manageBookInfoAction" prefHeight="27.0" prefWidth="203.0" text="Manage Book Info Tables" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Show: " />
+                  <RadioButton fx:id="availableBookRadioButton" mnemonicParsing="false" onAction="#availableBookRadioButtonAction" prefHeight="18.0" prefWidth="131.0" selected="true" text="Avaiable Books: ">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <Label fx:id="availableCountLabel" prefHeight="17.0" prefWidth="47.0" text="Label  " />
+                  <RadioButton fx:id="soldBookRadioButton" mnemonicParsing="false" onAction="#soldBookRadioButtonAction" prefHeight="18.0" prefWidth="106.0" text="Sold Books: " toggleGroup="$group" />
+                  <Label fx:id="soldCountLabel" text="Label" />
+               </children>
+            </HBox>
+            <Label text="Selected Book's Description:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <TextArea fx:id="bookDescriptionTA" editable="false" prefHeight="69.0" prefWidth="960.0" GridPane.rowIndex="4">
+               <font>
+                  <Font size="15.0" />
+               </font></TextArea>
+         </children>
+      </GridPane>
+   </center>
+
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+
+</BorderPane>
